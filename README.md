@@ -1,17 +1,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-# Employee Directory with Ionic and Node
-
-Employee directory is a sample application that allows you to look up employees by name, view the details of an employee,
-call, text, or email an employee, and navigate up and down the org chart.
-
-This version of Employee Directory is built with [Ionic](http://ionicframework.com/) and [Node.js]().
-
-![alt tag](assets/directory_search.png)
-
-![alt tag](assets/directory_details.png)
-
-![alt tag](assets/directory_reports.png)
+# FRC Scouting Appwith Ionic and Node
+Great for the 2016 Game FRC Strongehold 
 
 You can test the application in your browser:
 - Using the hosted version
