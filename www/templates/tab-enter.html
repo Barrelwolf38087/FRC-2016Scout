@@ -1,0 +1,270 @@
+<ion-view title="Entropy Scout">
+
+<!--
+  <ion-nav-buttons side="left">
+      <button class="button" ng-click="doSomething()">
+        I'm a button on the left of the navbar!
+      </button>
+        <button class="button icon ion-navicon"></button>
+  <button class="button">New Robot</button>
+
+   </ion-nav-buttons>
+
+-->
+
+  <ion-content class="has-header padding">
+
+
+
+  <h5>Basic Info</h5>
+
+
+
+<div class="row">
+  <div class="col">
+      <label class="item item-input item-floating-label">
+    <span class="input-label">Team #</span>
+    <input type="number" min="0" placeholder="Team #"  list="{{data.teamlist}}" ng-model="data.teamnumber">
+  </label>
+  </div>
+  <div class="col">
+      <label class="item item-input item-floating-label">
+    <span class="input-label">Match #</span>
+    <input type="number" min="0" placeholder="Match #"  ng-model="data.matchnumber">
+  </label>
+  </div>
+  
+</div>
+
+  
+<h5> Autonomous </h5>
+<h6> Check all that Apply </h6>
+<ion-checkbox ng-model="data.reachd">Reach Defense</ion-checkbox>
+<ion-checkbox ng-model="data.cdefense">Cross Defense</ion-checkbox>
+<ion-checkbox ng-model="data.lowgoala">Low Goal</ion-checkbox>
+<ion-checkbox ng-model="data.highgaola">High Goal</ion-checkbox>
+
+
+
+<!-- Team Color Checkbox -->
+<!--
+<ion-list>
+ 
+<ion-checkbox ng-model="data.red"><img src="red.png" alt="Mountain View" style="width:50px;height:28px;"> Red
+</ion-checkbox>
+<ion-checkbox ng-model="data.blue"><img src="blue.png" alt="Mountain View" style="width:50px;height:28px;"> Blue
+</ion-checkbox>
+</ion-list>
+-->
+ <!-- <h5>Scoring</h5> -->
+  <p> How many boulders were scored? </p>
+
+<div class="row">
+  <div class="col">
+      <label class="item item-input item-floating-label">
+    <span class="input-label">Low Goal</span>
+    <input type="number"  min="0" placeholder="Low Goal" ng-model="data.lowgoal">
+  </label>
+  </div>
+  <div class="col">
+      <label class="item item-input item-floating-label">
+    <span class="input-label">High Goal</span>
+    <input type="number"  min="0" placeholder="High Goal" ng-model="data.highgoal">
+  </label>
+  </div>
+  
+</div>
+
+
+<ion-checkbox ng-model="data.scale">Scaled the Tower?</ion-checkbox>
+
+  <h4>Defenses Information</h4>
+        <p> Cross UNDamaged Defenses?</p>
+
+<ul class="list">
+
+    <li class="item">
+      <div class="row">
+      <div class="col-20">
+        <img src="Portcullis.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Portcullis</span>
+    <input type="number" min="0"  placeholder="Portcullis" ng-model="data.portcullis">
+      </div>
+     
+
+      </div>
+     </li>
+
+      <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="ChevaldeFrise.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Cheval de Frise</span>
+    <input type="number" min="0"  placeholder="Cheval de Frise" ng-model="data.cheval">
+      </div>
+     
+
+      </div>
+     </li>
+
+           <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="moat.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Moat</span>
+    <input type="number" min="0"  placeholder="Moat" ng-model="data.moat">
+      </div>
+     
+
+      </div>
+     </li>
+
+           <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="ramparts.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Ramparts</span>
+    <input type="number" min="0"  placeholder="Ramparts" ng-model="data.rampart">
+      </div>
+     
+
+      </div>
+     </li>
+
+            <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="drawbridge.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Drawbridge</span>
+    <input type="number" min="0"  placeholder="Drawbridge" ng-model="data.drawbridge">
+      </div>
+     
+
+      </div>
+     </li>
+
+             <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="sallyport.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Sally Port</span>
+    <input type="number" min="0"  placeholder="Sally Port" ng-model="data.sport">
+      </div>
+     
+
+      </div>
+     </li>
+
+
+       <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="rockwall.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Rock Wall</span>
+    <input type="number" min="0"  placeholder="Rock Wall" ng-model="data.rockwall">
+      </div>
+     
+
+      </div>
+     </li>
+
+
+       <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="roughterrain.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Rough Terrain</span>
+    <input type="number" min="0"  placeholder="Rough Terrain" ng-model="data.roughterrain">
+      </div>
+     
+
+      </div>
+     </li>
+
+      <li class="item">
+      <div class="row">
+      <div class="col-20">
+<img src="lowbar.png" alt="Mountain View" style="width:50px;height:25px;">
+
+      </div>
+      <div class="col-80">
+                <label class="item item-input item-floating-label">
+    <span class="input-label">Low Bar</span>
+    <input type="number" min="0"  placeholder="Low Bar" ng-model="data.lowbar">
+      </div>
+     
+
+      </div>
+     </li>
+
+</ul>   
+
+
+
+  <!--
+
+        <ion-checkbox  ng-model="data.roughterrain" >
+<img src="roughterrain.png" alt="Mountain View" style="width:50px;height:25px;">
+        Rough Terrain</ion-checkbox>
+
+       <h3>Defenses Crossed by Robot</h3>
+
+  <h6>Amount of Times Robot Crosses Defense</h6>
+-->
+
+<!-- responsive grid -->
+<!-- RESPONSIVE GRID -->
+<!-- =============== -->
+<!-- ================== -->
+<!-- commenting it all out for now -->
+<!-- IF you want this code look in templates for old code -->
+
+
+
+
+
+
+
+<!-- at the absolute end -->
+<button class="button button-full button-positive" ng-disabled="delay" ng-click="submit()">
+  Submit
+</button>
+
+</form>
+
+  </ion-content>
+</ion-view>
+
+

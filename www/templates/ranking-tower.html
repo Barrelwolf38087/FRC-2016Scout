@@ -1,0 +1,36 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+ <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content class="padding">
+   <!-- stat card -->
+   <div align="center">
+
+   </div>
+<div align="center">
+   <p> Ranks team based on: </p>
+   <p> Amount of Climbs / Matches Played </p>
+</div>
+    <ion-list>
+      <ion-item class="item-remove-animate " ng-repeat="team in list" type="item-text-wrap" >
+        
+       <p> {{team.Index}}.  <b>Team: {{team.Team}} </b> </p>
+       <p> Climb Ratio: {{team.climbs}} climbs / {{team.total}} matches</p>
+       <p> <i> {{team.val}}</i> </p>
+     
+        
+
+      
+      </ion-item>
+    </ion-list>
+   
+
+
+  </ion-content>
+</ion-view>

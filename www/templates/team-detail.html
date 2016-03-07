@@ -1,0 +1,224 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+ <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+<ion-view view-title="{{team}}">
+<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+
+  <ion-content class="padding">
+   <!-- stat card --> 
+   <div align="center">
+<h3> Team {{team}} </h3>
+</div>
+    <div class="card" ng-repeat="item in list"> <!-- Start Card -->
+  <div class="item item-divider">
+    <div class="row">
+      <div class="col col-10">
+        <!--
+        <div ng-show="{{item.Red}}">  
+      <img  src="red.png" alt="Mountain View" style="width:10px;height:10px;" 
+      </div>
+        <div ng-show="{{item.Blue}}">
+         <img  src="blue.png" alt="Mountain View" style="width:10px;height:10px;"> 
+       </div>
+     -->
+
+  </div>
+   <div class="col">
+      <p> <i> Team #: </i> </p> {{item.Team}}
+  </div>
+ <div class="col">
+  <p> <i> Match #: </i> </p> {{item.Match}}
+    </div>
+
+  </div>
+  </div>
+  <div class="item item-text-wrap">
+  <!-- Content Area -->
+   <div class="row">
+      <div class="col">
+    Low Goal: {{item.Low}}
+  </div>
+   <div class="col">
+    High Goal: {{item.High}}
+  </div>
+  </div>
+
+<div class="row">
+  Defenses Faced:
+</div>
+
+<div class="row">
+
+  <div class="col" ng-show="{{item.valCheva}}">
+  <div style="    border: 1px solid black;">
+  <figure>
+
+  <img src="ChevaldeFrise.png" alt="ChevaldeFrise" style="width:30px;height:30px;">
+   <div align="center">
+
+   <figcaption>{{item.fieldCheva}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+
+
+
+
+<div class="col" ng-show="{{item.valmoat}}">
+  <div style="    border: 1px solid black;">
+  <figure>
+  <img src="moat.png" alt="Moat" style="width:30px;height:30x;">
+    <div align="center">
+   <figcaption>{{item.fieldMoat}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valramparts}}">
+  <div style="    border: 1px solid black;">
+  <figure>
+  <img src="ramparts.png" alt="Ramparts" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fieldramparts}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valdrawbridge}}">
+  <div style="    border: 1px solid black;">
+  <figure>
+  <img src="drawbridge.png" alt="Drawbridge" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fielddrawbridge}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valSallyPort}}">
+   <div style="    border: 1px solid black;">
+  <figure>
+  <img src="sallyport.png" alt="SallyPort" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fieldSallyPort}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valRockwall}}">
+    <div style="    border: 1px solid black;">
+  <figure>
+  <img src="rockwall.png" alt="ChevaldeFrise" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fieldRockwall}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valRoughterrain}}">
+   <div style="    border: 1px solid black;">
+  <figure>
+  <img src="roughterrain.png" alt="ChevaldeFrise" style="width:30px;height:30px;">
+    <div align="center">
+   <figcaption>{{item.fieldRoughterrain}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+ 
+<div class="col" ng-show="{{item.valLowBar}}">
+    <div style="    border: 1px solid black;">
+  <figure>
+  <img src="lowbar.png" alt="ChevaldeFrise" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fieldLowBar}}</figcaption>
+ </div>
+</figure>
+</div>
+ </div>
+
+<div class="col" ng-show="{{item.valPortcullis}}">
+  <div style="    border: 1px solid black;">
+  <figure>
+  <img src="Portcullis.png" alt="ChevaldeFrise" style="width:30px;height:30px;">
+   <div align="center">
+   <figcaption>{{item.fieldPortcullis}}</figcaption>
+ </div>
+</figure>
+</div>
+</div>
+
+
+ 
+
+</div>
+<div ng-show="{{item.ScaledTower}}">
+  <div class="row">
+<div align="center">
+  <p> Succesfully Scaled Tower </p>
+</div>
+</div>
+</div>
+
+<div align="center">
+<p> <b> AUTO </b> </p>
+
+</div>
+
+
+<div ng-show="{{item.AHighgoal}}">
+  <div class="row">
+<div align="center">
+  <p> Scored High Goal </p>
+</div>
+</div>
+</div>
+
+<div ng-show="{{item.ALowgoal}}">
+  <div class="row">
+<div align="center">
+  <p> Scored Low Goal </p>
+</div>
+</div>
+</div>
+
+<div ng-show="{{item.CrossD}}">
+  <div class="row">
+<div align="center">
+  <p> Crossed Defense </p>
+</div>
+</div>
+</div>
+
+<div ng-show="{{item.ReachD}}">
+  <div class="row">
+<div align="center">
+  <p> Reached Defense </p>
+</div>
+</div>
+</div>
+
+
+
+  </div>
+</div>
+<!-- End Card -->
+
+  </ion-content>
+</ion-view>
