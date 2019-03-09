@@ -1,7 +1,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 # FRC Scouting Appwith Ionic and Node
-Great for the 2016 Game FRC Strongehold 
+Great for the 2016 Game FRC Stronghold 
 
 You can test the application in your browser:
 - Using the hosted version
